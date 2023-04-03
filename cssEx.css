@@ -1,0 +1,43 @@
+section div{
+    
+}
+
+#Process{
+    margin-left: 5%;
+}
+
+#Process img{
+    width: 40%;
+    height: 40%;
+}
+
+#sectionEx{
+    display: flex;
+    flex-direction: row;
+}
+
+#resume{
+    margin-bottom: 4%;
+}
+
+.Flèches{
+    width: 8%;
+    height: 8%;
+}
+
+.TexteEx{
+    display: flex;
+    
+    /* augmenter taille*/
+}
+
+#Process img{
+    margin: 0;
+}
+
+/*
+#Res{
+    display: flex;
+    flex-wrap: wrap;
+}
+*/

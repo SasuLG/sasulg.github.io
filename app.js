@@ -1,13 +1,19 @@
 /*
 var cursor = document.querySelector('.cursor')
 var body = document.querySelector('body')
-
+console.log(cursor)
 document.addEventListener('mousemove', e=>{
     body.style.cursor = 'none'
     cursor.setAttribute('style', 'top:'+(e.pageY)+"px; left:" +(e.pageX)+"px;")
 })
-*/
 
+document.addEventListener('scroll', e=>{
+    cursor.setAttribute('style', 'top:'+(window.scrollY + cursor.offsetTop)+"px; left:" +(cursor.offsetLeft)+"px;")
+    console.log(document.documentElement.scrollTop)
+    console.log(window.scrollY)
+
+})
+*/
 var typeWorks = document.querySelector('#TypeWork')
 var listWork = document.querySelector('#listWork')
 
@@ -78,3 +84,10 @@ function WorkOfTypeWorks(e){
     }
 }
 listWork.style.gridTemplateRows+='1fr'
+var images = document.querySelectorAll('img')
+images.forEach(e=>{
+    e.addEventListener('click', oui)
+})
+function oui(){
+    window.open("Odomo.html", "popup");
+}
