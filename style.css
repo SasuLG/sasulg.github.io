@@ -785,4 +785,10 @@ img:hover{
     #listWork{
         justify-content: center;
     }
+    h1{
+        font-size: 50px !important;
+    }
+    #aboutContent{
+        width: 80% !important;
+    }
 }
