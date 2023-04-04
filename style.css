@@ -153,6 +153,7 @@ h1{
     margin-top: 5%;
     margin-bottom: 72px;
     margin-left: auto;
+    width: 100%;
 }
 .line-break{
     width: 100%;
@@ -243,7 +244,7 @@ h1{
     margin-bottom: 10% !important;
     background: linear-gradient(105.43deg, rgba(168, 128, 255, 0) 25.1%, rgba(168, 128, 255, 0.32) 72.57%, rgba(168, 128, 255, 0) 102.57%), linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
     border-radius: 20px;
-    width: 60%;
+    width: 50%;
     /* carré
     width: 762px;
     height: 564px;
@@ -543,8 +544,23 @@ button{
 #AnneeXp img, #Passion img{
     transform: rotate(180deg);
 }
+#gridInfos p{
+    font-size: 30px;
+    margin-top: 4%;/**/
+}
+#gridInfos h2, #gridInfos p{
+    margin-left: 5%;
+}
+#Passion p{
+    font-size: 40px !important;
+}
+#aPropos{
+    margin: 5%;
+}
 
-
+#logo3:hover, #logo1:hover{
+    cursor: pointer !important;
+}
 
 
 button:hover{
@@ -562,17 +578,53 @@ button:hover{
     transform: scale(1.05,1.05);
 }
 #listWork img{
-
-    /*transition: all 0.5s ease-out;*/
-    transition: all 2s ease-out;
-
+        /*transition: all 0.5s ease-out;*/
+    /*transition: all 2s ease-out;*/
+    /*
+    transform:
+    perspective(800px)
+    rotateY(25deg) scale(0.9)
+    rotateX(10deg);
+  transition: 0.6s ease all;
+  */
+  /*
+  transform:
+  perspective(900px)
+  rotateX(60deg)
+  scale(0.7);
+box-shadow: 0px 20px 100px #555;
+transition:0.6s ease all;
+*/
+    
+    transform: perspective(1500px) rotateY(15deg);
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    transition: transform 1s ease 0s;
+    
 }
-#listWork img:hover{/*transform and scale*/
+#listWork img:hover{
     opacity: 1;
     transform: scale(1.35,1.35);
 
-    /*transform: rotate3d(1, 0, -0, 0.1turn);*/
+
+    transform:
+    perspective(800px)
+    rotateY(-15deg)
+    translateY(-50px)
+    rotateX(10deg)
+    scale(1.3);
+  filter: blur(0);
     
+    /*
+    transform:
+    rotate(0deg)
+    scale(1)
+    translateY(10px);
+    */
+
+    /*transform: perspective(300px) rotateY(-10deg);*/
+    /*transform: rotate3d(0.5, -0.5, 0.5, 0.05turn);*/
+
 }
 nav a:hover{
     box-shadow: inset 0px 0px 4px 2px rgb(168 128 255 / 10%);
@@ -582,7 +634,8 @@ nav a:hover{
     transition: all 0.6s ease-out;
 }
 #TypeWork div:hover{
-    margin-right: -35%;
+    margin-right: -35% !important;
+    cursor: default;
 }
 
 #WorksJava:hover{
@@ -607,30 +660,129 @@ nav a:hover{
 
 .oui{
     background-color: rgba(0, 0, 255, 0.2) !important;
+    box-shadow: 1px 5px 100px rgba(0, 0, 255, 0.2) !important;
 }
 .red{
     background-color: red !important;
+    box-shadow: 1px 5px 100px red !important;
 }
 .yellow{
     opacity: 0.5;
     background-color: yellowgreen !important;
+    box-shadow: 1px 5px 100px yellowgreen !important;
 }
 .blue{
     background-color: blue !important;
+    box-shadow: 1px 5px 100px blue !important;
 }
 .orange{
     background-color: orange !important;
+    box-shadow: 1px 5px 100px orange !important;
 }
 .black{
     background-color: black !important;
+    box-shadow: 1px 5px 100px black !important;
 }
 .gray{
     background-color: gray !important;
+    box-shadow: 1px 5px 100px gray !important;
 }
 img{
     transition: all 0.6s ease-in-out;
 }
 img:hover{
-    transform: rotate(360deg);
-    
+    transform: rotate(360deg);  
+}
+.Java img:hover{
+    box-shadow: 1px 5px 100px red !important;
+}
+.Shell img:hover{
+    box-shadow: 1px 5px 100px black !important;
+}
+.SQL img:hover{
+    box-shadow: 1px 5px 100px orange !important;
+}
+.Html-Css img:hover{
+    box-shadow: 1px 5px 100px blue !important;
+}
+.Managment img:hover{
+    box-shadow: 1px 5px 100px gray !important;
+}
+.javascript img:hover{
+    box-shadow: 1px 5px 100px yellow !important;
+}
+
+@media screen and (max-width: 1100px){
+    #listWork{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 850px){
+    #listWork{
+        grid-template-columns: 1fr;
+        width: 60%;
+    }
+    #work{
+        display: block !important;
+    }
+    #TypeWork{
+        display: flex;
+        justify-content: space-around;
+        width: 75%;
+        margin: auto;
+    }
+    #TypeWork div{
+        width: 100%;
+        margin-bottom: 4% ;
+    }
+    #TypeWork div:hover{
+        margin-right: 0 !important;
+        margin-top: -4%;
+    }
+    nav{
+        width: 60%;
+    }
+    #about h1{
+        font-size: 65px;
+    }
+}
+@media screen and (max-width: 550px){
+    nav{
+        width: 80%;
+    }
+    #TypeWork{
+        /*
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        */
+
+        flex-direction: row; 
+        flex-wrap: wrap;
+    }
+    #TypeWork div{
+        width: 30%;
+    }
+    #listWork img{
+        height: 90%;
+    }
+    #about h1{
+        font-size: 30px;
+    }
+    textarea, #name, #Objet, #email{
+        font-size: 10px;
+    }
+    #logos div{
+        margin-bottom: 5%;
+    }
+    #logos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 0%;
+    }
+    #listWork{
+        justify-content: center;
+    }
 }

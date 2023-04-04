@@ -1,13 +1,19 @@
 /*
 var cursor = document.querySelector('.cursor')
 var body = document.querySelector('body')
-
+console.log(cursor)
 document.addEventListener('mousemove', e=>{
     body.style.cursor = 'none'
     cursor.setAttribute('style', 'top:'+(e.pageY)+"px; left:" +(e.pageX)+"px;")
 })
-*/
 
+document.addEventListener('scroll', e=>{
+    cursor.setAttribute('style', 'top:'+(window.scrollY + cursor.offsetTop)+"px; left:" +(cursor.offsetLeft)+"px;")
+    console.log(document.documentElement.scrollTop)
+    console.log(window.scrollY)
+
+})
+*/
 var typeWorks = document.querySelector('#TypeWork')
 var listWork = document.querySelector('#listWork')
 
@@ -34,7 +40,7 @@ function typeWorkClick(){
         case 'javascript':
             this.classList.add('yellow')
             break;
-        case 'html/css':
+        case 'html-css':
             this.classList.add('blue')
             break;
         case 'sql':
@@ -78,3 +84,30 @@ function WorkOfTypeWorks(e){
     }
 }
 listWork.style.gridTemplateRows+='1fr'
+var images = document.querySelectorAll('#listWork img')
+images.forEach(e=>{
+    console.log(e.alt)
+    if (e.alt == 'GenMdp'){
+        e.addEventListener('click', mdp)
+    }else if (e.alt == 'Quizz'){
+        e.addEventListener('click', quizz)
+    }else{
+        e.addEventListener('click', oui)
+    }
+})
+function oui(){
+    window.open("Odomo.html", "popup");
+}
+function mdp(){
+    window.open("https://sasulg.github.io/GenerateurMdp", "popup");
+}
+function quizz(){
+    window.open("https://sasulg.github.io/Quizz", "popup");
+}
+
+
+var github = document.querySelector('#logo3')
+github.addEventListener('click', git)
+function git(){
+    window.open("https://github.com/SasuLG", "popup");
+}
