@@ -3,7 +3,7 @@ section div{
 }
 
 #Process{
-    margin-left: 5%;
+    margin-left: 10%;
 }
 
 #Process img{
@@ -55,3 +55,34 @@ section div{
 #download:hover{
     cursor: pointer;
 }
+
+#sectionEx{
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+#sectionEx div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.Flèches{
+    width: 50% !important;
+    height: 50% !important;
+}
+.Flèches img{
+    height: 51% !important;
+}
+#Images img{
+    width: 100%;
+}
+#Images{
+    margin-left: -45%;
+}
+#Fleche2{
+    margin-left: 10%;
+}
+#Process{
+    width: 120%;
+}
+
+
