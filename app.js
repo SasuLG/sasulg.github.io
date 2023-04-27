@@ -86,11 +86,12 @@ function WorkOfTypeWorks(e){
 listWork.style.gridTemplateRows+='1fr'
 var images = document.querySelectorAll('#listWork img')
 images.forEach(e=>{
-    console.log(e.alt)
-    if (e.alt == 'GenMdp'){
+    if (e.alt == 'Générateur de mot de passe'){
         e.addEventListener('click', mdp)
     }else if (e.alt == 'Quizz'){
         e.addEventListener('click', quizz)
+    }else if(e.alt == 'Memories'){
+        e.addEventListener('click', memories)
     }else{
         e.addEventListener('click', oui)
     }
@@ -103,6 +104,9 @@ function mdp(){
 }
 function quizz(){
     window.open("https://sasulg.github.io/Quizz", "popup");
+}
+function memories(){
+    window.open("https://sasulg.github.io/Memories", "popup");
 }
 
 
