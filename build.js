@@ -18,6 +18,8 @@ var nbLanguage = [1, 1, 1, 1, 1, 1, 2, 2, 2]
 var nbLanguageTotal = 0
 var Language = ['Java', 'Java', 'Shell', 'SQL', 'Html-Css', 'Managment', 'javascript', 'Html-Css', 'javascript', 'Html-Css', 'javascript', 'Html-Css']
 
+var etude = [true, true, true, true, true, true, false, false]
+
 for (var i = 0; i < NbProjects; i++){
     var divLanguage =document.createElement('div')
     listWork.appendChild(divLanguage)
@@ -30,6 +32,19 @@ for (var i = 0; i < NbProjects; i++){
             var divImages =document.createElement('div')
             divImages.classList.add("images")
             divProject.appendChild(divImages)
+
+                if (etude[i]){
+                    var imgEtude = document.createElement('img')
+                    imgEtude.src = "image/etude.png"
+                    imgEtude.alt = "etude"
+                    if (i%2==0){
+                        imgEtude.classList.add('etudeGauche')
+                    }else{
+                        imgEtude.classList.add('etudeDroite')
+                    }
+                    imgEtude.id  = tabTitre[i]
+                    divImages.appendChild(imgEtude)
+                }
 
                 var img = document.createElement('img')
                 img.src = "image/projets/"+images[i]

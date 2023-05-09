@@ -425,7 +425,7 @@ h1{
 }
 
 
-#listWork .images{
+#listWork .images:not(.etudeGauche, .etudeDroite){
     border: 1px solid rgba(255, 255, 255, 0.1);
     background: radial-gradient(50% 70.31% at 50% 0%, rgba(126, 61, 255, 0.04) 0%, rgba(126, 61, 255, 0) 100%), rgba(11, 1, 29, 0.01);
     box-shadow: inset 0px 0px 4px 2px rgb(168 128 255 / 10%);
@@ -579,7 +579,7 @@ button:hover{
     opacity: .8;
     transform: scale(1.05,1.05);
 }
-#listWork img{
+#listWork img:not(.etudeGauche, .etudeDroite){
         /*transition: all 0.5s ease-out;*/
     /*transition: all 2s ease-out;*/
     /*
@@ -604,7 +604,7 @@ transition:0.6s ease all;
     transition: transform 1s ease 0s;
     
 }
-#listWork img:hover{
+#listWork img:hover:not(.etudeGauche, .etudeDroite){
     opacity: 1;
     transform: scale(1.35,1.35);
 
@@ -692,31 +692,76 @@ nav a:hover{
 img{
     transition: all 0.6s ease-in-out;
 }
-img:hover{
+img:hover:not(.etudeGauche, .etudeDroite){
     transform: rotate(360deg);  
 }
-.Java img:hover{
+.Java img:hover:not(.etudeGauche, .etudeDroite){
     box-shadow: 1px 5px 100px red !important;
 }
-.Shell img:hover{
+.Shell img:hover:not(.etudeGauche, .etudeDroite){
     box-shadow: 1px 5px 100px black !important;
 }
-.SQL img:hover{
+.SQL img:hover:not(.etudeGauche, .etudeDroite){
     box-shadow: 1px 5px 100px orange !important;
 }
-.Html-Css img:hover{
+.Html-Css img:hover:not(.etudeGauche, .etudeDroite){
     box-shadow: 1px 5px 100px blue !important;
 }
-.Managment img:hover{
+.Managment img:hover:not(.etudeGauche, .etudeDroite){
     box-shadow: 1px 5px 100px gray !important;
 }
-.javascript img:hover{
+.javascript img:hover:not(.etudeGauche, .etudeDroite){
     box-shadow: 1px 5px 100px yellow !important;
+}
+
+@media screen and (max-width: 1700px){
+    .etudeDroite{
+        left: 75% !important;
+    }
+}
+
+@media screen and (max-width: 1550px){
+    .etudeDroite{
+        left: 78% !important;
+    }
+    .etudeGauche{
+        left: 38% !important;
+    }
+}
+
+@media screen and (max-width: 1400px){
+    .etudeDroite{
+        left: 81% !important;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    .etudeDroite{
+        left: 83% !important;
+    }
+    .etudeGauche{
+        left: 37% !important;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .etudeDroite{
+        left: 84% !important;
+    }
 }
 
 @media screen and (max-width: 1100px){
     #listWork{
         width: 85%;
+    }
+    .etudeDroite{
+        left: 83% !important;
+    }
+    .etudeGauche{
+        left: 39% !important;
+    }
+    .etudeGauche, .etudeDroite{
+        width: 16% !important;
     }
 }
 
@@ -748,6 +793,9 @@ img:hover{
     #about h1{
         font-size: 65px;
     }
+    .etudeDroite, .etudeGauche{
+        left: 65% !important;
+    }
 }
 @media screen and (max-width: 550px){
     nav{
@@ -766,7 +814,7 @@ img:hover{
     #TypeWork div{
         width: 30%;
     }
-    #listWork img{
+    #listWork img:not(.etudeGauche, .etudeDroite){
         height: 90%;
     }
     #about h1{
@@ -793,4 +841,50 @@ img:hover{
     #aboutContent{
         width: 80% !important;
     }
+    .etudeDroite, .etudeGauche{
+        width: 25% !important;
+        margin-top: -10% !important;
+        left: 63% !important;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .etudeDroite, .etudeGauche{
+        width: 30% !important;
+        left: 69% !important;
+    }
+}
+
+@media screen and (max-width: 350px){
+    .etudeDroite, .etudeGauche{
+        left: 71% !important;
+    }
+}
+
+.etudeGauche, .etudeDroite{
+    margin-top: -5%;
+    position: absolute;
+    z-index: 1;
+    width: 15%;
+    left: 40.5%;
+    opacity: 0.8;
+    transform: rotate(45deg);
+}
+
+.etudeDroite{
+    left: 71%;
+}
+
+.etudeHover{
+    opacity: 1;
+    transform: scale(1.35,1.35);
+
+
+    transform:
+    perspective(800px)
+    rotateY(-15deg)
+    translateY(-50px)
+    rotateX(10deg)
+    scale(1.3);
+  filter: blur(0);
 }

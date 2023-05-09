@@ -97,7 +97,7 @@ images.forEach(e=>{
     }
 })
 function oui(){
-    window.open("Odomo.html", "popup");
+    window.open("retEx/Odomo.html", "popup");
 }
 function mdp(){
     window.open("https://sasulg.github.io/GenerateurMdp", "popup");
@@ -115,3 +115,5 @@ github.addEventListener('click', git)
 function git(){
     window.open("https://github.com/SasuLG", "popup");
 }
+//quand hover recuperer le parent et ajouter .etudeHover
+//quand choisLang, modifier en conséquence par rapport au num projet donnée
