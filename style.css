@@ -895,6 +895,5 @@ img:hover:not(.etudeGauche, .etudeDroite){
 }
 
 .linkProjects img{
-    width: 100%;
     height: 100%;
 }

@@ -92,11 +92,13 @@ projects.forEach(e=>{
     }
 })
 function hover(){
-    this.previousSibling.id = 'etudeHover'
+    //this.previousSibling.id = 'etudeHover'
+    this.parentNode.previousSibling.id = 'etudeHover'
 }
-        //celui du parent apres modif
+       
 function unhover(){
-    this.previousSibling.id = this.alt
+    //this.previousSibling.id = this.alt
+    this.parentNode.previousSibling.id = this.alt
 }
 
 listWork.style.gridTemplateRows+='1fr'

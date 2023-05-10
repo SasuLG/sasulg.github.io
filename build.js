@@ -46,7 +46,7 @@ for (var i = 0; i < NbProjects; i++){
                     imgEtude.id  = tabTitre[i]
                     divImages.appendChild(imgEtude)
                 }
-                /*
+                
                 var a = document.createElement('a')
                 if (etude[i]){
                     a.href = "retEx/"+retExHtml[i]+".html"
@@ -54,13 +54,13 @@ for (var i = 0; i < NbProjects; i++){
                 }
                 a.classList.add('linkProjects')
                 divImages.appendChild(a)
-                */
+                
 
                 var img = document.createElement('img')
                 img.src = "image/projets/"+images[i]
                 img.alt = tabTitre[i]
-                //a.appendChild(img)
-                divImages.appendChild(img)
+                a.appendChild(img)
+                //divImages.appendChild(img)
 
             var texte = document.createElement('div')
             texte.classList.add('texte')
