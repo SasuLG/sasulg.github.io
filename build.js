@@ -19,6 +19,7 @@ var nbLanguageTotal = 0
 var Language = ['Java', 'Java', 'Shell', 'SQL', 'Html-Css', 'Managment', 'javascript', 'Html-Css', 'javascript', 'Html-Css', 'javascript', 'Html-Css']
 
 var etude = [true, true, true, true, true, true, false, false]
+var retExHtml = ["Odomo", "Biosphere", "InstallationPoste", "CreationBD", "SiteWebPeste", "PESTEL"]
 
 for (var i = 0; i < NbProjects; i++){
     var divLanguage =document.createElement('div')
@@ -32,7 +33,7 @@ for (var i = 0; i < NbProjects; i++){
             var divImages =document.createElement('div')
             divImages.classList.add("images")
             divProject.appendChild(divImages)
-
+                
                 if (etude[i]){
                     var imgEtude = document.createElement('img')
                     imgEtude.src = "image/etude.png"
@@ -45,10 +46,20 @@ for (var i = 0; i < NbProjects; i++){
                     imgEtude.id  = tabTitre[i]
                     divImages.appendChild(imgEtude)
                 }
+                /*
+                var a = document.createElement('a')
+                if (etude[i]){
+                    a.href = "retEx/"+retExHtml[i]+".html"
+                    a.target = "blank"
+                }
+                a.classList.add('linkProjects')
+                divImages.appendChild(a)
+                */
 
                 var img = document.createElement('img')
                 img.src = "image/projets/"+images[i]
                 img.alt = tabTitre[i]
+                //a.appendChild(img)
                 divImages.appendChild(img)
 
             var texte = document.createElement('div')

@@ -83,6 +83,22 @@ function WorkOfTypeWorks(e){
 
     }
 }
+
+var projects = document.querySelectorAll('#listWork img')
+projects.forEach(e=>{
+    if (e.alt != "etude"){
+        e.addEventListener('mouseover', hover)
+        e.addEventListener('mouseout', unhover)
+    }
+})
+function hover(){
+    this.previousSibling.id = 'etudeHover'
+}
+        //celui du parent apres modif
+function unhover(){
+    this.previousSibling.id = this.alt
+}
+
 listWork.style.gridTemplateRows+='1fr'
 var images = document.querySelectorAll('#listWork img')
 images.forEach(e=>{
@@ -93,12 +109,10 @@ images.forEach(e=>{
     }else if(e.alt == 'Memories'){
         e.addEventListener('click', memories)
     }else{
-        e.addEventListener('click', oui)
+        
     }
 })
-function oui(){
-    window.open("retEx/Odomo.html", "popup");
-}
+
 function mdp(){
     window.open("https://sasulg.github.io/GenerateurMdp", "popup");
 }
