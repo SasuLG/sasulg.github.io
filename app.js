@@ -72,10 +72,30 @@ function WorkOfTypeWorks(e){
                 if (e.children[0].innerHTML == "All"){
                     if (j==0 ){
                         listWork.children[i].children[0].id = 'Projet'+numWorks
+
+                        if (listWork.children[i].children[0].children[0].children[0].alt!=undefined){
+                            if (numWorks%2!=0){
+                                listWork.children[i].children[0].children[0].children[0].classList.add('etudeGauche')
+                            }else{
+                                listWork.children[i].children[0].children[0].children[0].classList.add('etudeDroite')
+                            }
+                        }
+
                         numWorks++
+                        showAll.innerHTML = 'Cacher'
+                        //affiche tout (meme voir tout)
                     }
                 }else{
                     listWork.children[i].children[0].id = 'Projet'+numWorks
+
+                    if (listWork.children[i].children[0].children[0].children[0].alt!=undefined){
+                        if (numWorks%2!=0){
+                            listWork.children[i].children[0].children[0].children[0].classList.add('etudeGauche')
+                        }else{
+                            listWork.children[i].children[0].children[0].children[0].classList.add('etudeDroite')
+                        }
+                    }
+                    
                     numWorks++
                 }
             }
@@ -133,3 +153,5 @@ function git(){
 }
 //quand hover recuperer le parent et ajouter .etudeHover
 //quand choisLang, modifier en conséquence par rapport au num projet donnée
+
+//erreur quand hover un non etude

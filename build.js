@@ -23,6 +23,9 @@ var retExHtml = ["Odomo", "Biosphere", "InstallationPoste", "CreationBD", "SiteW
 
 for (var i = 0; i < NbProjects; i++){
     var divLanguage =document.createElement('div')
+    if (i>7){
+        divLanguage.style.display = 'none'
+    }
     listWork.appendChild(divLanguage)
 
         var divProject =document.createElement('div')
@@ -117,4 +120,32 @@ for (var i = 0; i < NbProjects; i++){
                         p3.innerHTML = date[i]
                         border2.appendChild(p3)
 }
+if (NbProjects>7){
+ var showAllDiv = document.createElement('div')
+ showAllDiv.id = 'showAllDiv'
+ var showAll = document.querySelector('h1')
+ showAllDiv.appendChild(showAll)
+ showAll.addEventListener('click', voirTout)
+ showAll.innerHTML = "Voir tout"
+showAll.id = 'showAll'
+showAll.classList.add('border')
+ var work = document.querySelector('#work')
+ work.appendChild(showAllDiv)
+}
 
+function voirTout(){
+    for (var i  = 0; i < listWork.childElementCount; i++){
+        if (showAll.innerHTML == 'Voir tout'){
+            listWork.children[i].style.display = 'block'
+        }else{
+            if (i>7 && i < listWork.childElementCount){
+                listWork.children[i].style.display = 'none' 
+            }
+        }
+    }
+    if (showAll.innerHTML == 'Voir tout'){
+        showAll.innerHTML = 'Cacher'
+    }else{
+        showAll.innerHTML = 'Voir tout'
+    }
+}

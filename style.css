@@ -390,6 +390,8 @@ h1{
 
 #work{
     display: flex;
+
+    flex-wrap: wrap;
 }
 #TypeWork{
     width: 5.5%;
@@ -896,4 +898,19 @@ img:hover:not(.etudeGauche, .etudeDroite){
 
 .linkProjects img{
     height: 100%;
+}
+
+#showAllDiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#showAll{
+    width: 15%;
+    padding: 1%;
+}
+
+#showAll:hover{
+    cursor: pointer;
 }
