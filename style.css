@@ -228,7 +228,7 @@ h1{
 }
 */
 
-#about h1{
+.about h1{
     background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.6) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -237,11 +237,11 @@ h1{
     display: flex;
     justify-content: center;
 }
-#aboutContent div{
+.aboutContent div{
     display: flex;
     justify-content: center;
 }
-#aboutContent{
+.aboutContent{
     margin-top: 5% !important;
     margin-bottom: 10% !important;
     background: linear-gradient(105.43deg, rgba(168, 128, 255, 0) 25.1%, rgba(168, 128, 255, 0.32) 72.57%, rgba(168, 128, 255, 0) 102.57%), linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
@@ -254,7 +254,7 @@ h1{
     margin: auto;
     /*box-shadow: 1px 5px 100px white; red, blue*/ 
 }
-#aboutContent{
+.aboutContent{
     background-image: url('https://uploads-ssl.webflow.com/63c6b6a8e34f347803dc4c5a/63f4f6e017165de20c72a3f4_Lights%20(10)%20(1).png');
     background-attachment: fixed;
 }
@@ -792,7 +792,7 @@ img:hover:not(.etudeGauche, .etudeDroite){
     nav{
         width: 60%;
     }
-    #about h1{
+    .about h1{
         font-size: 65px;
     }
     .etudeDroite, .etudeGauche{
@@ -819,7 +819,7 @@ img:hover:not(.etudeGauche, .etudeDroite){
     #listWork img:not(.etudeGauche, .etudeDroite){
         height: 90%;
     }
-    #about h1{
+    .about h1{
         font-size: 30px;
     }
     textarea, #name, #Objet, #email{
@@ -840,7 +840,7 @@ img:hover:not(.etudeGauche, .etudeDroite){
     h1{
         font-size: 50px !important;
     }
-    #aboutContent{
+    .aboutContent{
         width: 80% !important;
     }
     .etudeDroite, .etudeGauche{

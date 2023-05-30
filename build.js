@@ -29,8 +29,8 @@ for (var i = 0; i < NbProjects; i++){
     listWork.appendChild(divLanguage)
 
         var divProject =document.createElement('div')
-        var non = i+1
-        divProject.id = ('Projet'+ non)
+        var numProject = i+1
+        divProject.id = ('Projet'+ numProject)
         divLanguage.appendChild(divProject)
 
             var divImages =document.createElement('div')
@@ -121,16 +121,16 @@ for (var i = 0; i < NbProjects; i++){
                         border2.appendChild(p3)
 }
 if (NbProjects>7){
- var showAllDiv = document.createElement('div')
- showAllDiv.id = 'showAllDiv'
- var showAll = document.querySelector('h1')
- showAllDiv.appendChild(showAll)
- showAll.addEventListener('click', voirTout)
- showAll.innerHTML = "Voir tout"
-showAll.id = 'showAll'
-showAll.classList.add('border')
- var work = document.querySelector('#work')
- work.appendChild(showAllDiv)
+    var showAllDiv = document.createElement('div')
+    showAllDiv.id = 'showAllDiv'
+    var showAll = document.createElement('h1')
+    showAllDiv.appendChild(showAll)
+    showAll.addEventListener('click', voirTout)
+    showAll.innerHTML = "Voir tout"
+    showAll.id = 'showAll'
+    showAll.classList.add('border')
+    var work = document.querySelector('#work')
+    work.appendChild(showAllDiv)
 }
 
 function voirTout(){

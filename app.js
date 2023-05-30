@@ -75,9 +75,9 @@ function WorkOfTypeWorks(e){
 
                         if (listWork.children[i].children[0].children[0].children[0].alt!=undefined){
                             if (numWorks%2!=0){
-                                listWork.children[i].children[0].children[0].children[0].classList.add('etudeGauche')
+                                listWork.children[i].children[0].children[0].children[0].classList = 'etudeGauche'
                             }else{
-                                listWork.children[i].children[0].children[0].children[0].classList.add('etudeDroite')
+                                listWork.children[i].children[0].children[0].children[0].classList = 'etudeDroite'
                             }
                         }
 
@@ -90,9 +90,9 @@ function WorkOfTypeWorks(e){
 
                     if (listWork.children[i].children[0].children[0].children[0].alt!=undefined){
                         if (numWorks%2!=0){
-                            listWork.children[i].children[0].children[0].children[0].classList.add('etudeGauche')
+                            listWork.children[i].children[0].children[0].children[0].classList = 'etudeGauche'
                         }else{
-                            listWork.children[i].children[0].children[0].children[0].classList.add('etudeDroite')
+                            listWork.children[i].children[0].children[0].children[0].classList = 'etudeDroite'
                         }
                     }
                     
