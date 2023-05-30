@@ -52,6 +52,9 @@ function typeWorkClick(){
         case 'managment':
             this.classList.add('gray')
             break;
+        case 'c#':
+            this.classList.add('purple')
+            break;
         default:
             console.log('erreur')
             break;
@@ -66,7 +69,7 @@ function WorkOfTypeWorks(e){
         listWork.children[i].style.display = 'none'
         var langs = listWork.children[i].className.split(' ')
         for(var j = 0; j < langs.length; j++){
-            if (langs[j] == e.children[0].innerHTML || e.children[0].innerHTML == "All"){
+            if ((langs[j] == e.children[0].innerHTML || e.children[0].innerHTML == "All" ) ||(langs[j] == 'CSharp' && e.children[0].innerHTML == 'C#')){
                 listWork.children[i].style.display = 'block'
                 
                 if (e.children[0].innerHTML == "All"){
@@ -113,12 +116,16 @@ projects.forEach(e=>{
 })
 function hover(){
     //this.previousSibling.id = 'etudeHover'
-    this.parentNode.previousSibling.id = 'etudeHover'
+    if (this.parentNode.previousSibling !=null){
+        this.parentNode.previousSibling.id = 'etudeHover'
+    }
 }
        
 function unhover(){
     //this.previousSibling.id = this.alt
-    this.parentNode.previousSibling.id = this.alt
+    if (this.parentNode.previousSibling !=null){
+        this.parentNode.previousSibling.id = this.alt
+    }
 }
 
 listWork.style.gridTemplateRows+='1fr'

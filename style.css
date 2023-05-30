@@ -661,6 +661,9 @@ nav a:hover{
 #WorksManagment:hover{
     background-color: gray;
 }
+#CSharp:hover{
+    background-color: purple;
+}
 
 .oui{
     background-color: rgba(0, 0, 255, 0.2) !important;
@@ -691,6 +694,10 @@ nav a:hover{
     background-color: gray !important;
     box-shadow: 1px 5px 100px gray !important;
 }
+.purple{
+    background-color: purple !important;
+    box-shadow: 1px 5px 100px purple !important;
+}
 img{
     transition: all 0.6s ease-in-out;
 }
@@ -714,6 +721,9 @@ img:hover:not(.etudeGauche, .etudeDroite){
 }
 .javascript img:hover:not(.etudeGauche, .etudeDroite){
     box-shadow: 1px 5px 100px yellow !important;
+}
+.CSharp img:hover:not(.etudeGauche, .etudeDroite){
+    box-shadow: 1px 5px 100px purple !important;
 }
 
 @media screen and (max-width: 1700px){
