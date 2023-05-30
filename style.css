@@ -808,6 +808,9 @@ img:hover:not(.etudeGauche, .etudeDroite){
     .etudeDroite, .etudeGauche{
         left: 65% !important;
     }
+    #showAll{
+        width: 20% !important;
+    }
 }
 @media screen and (max-width: 550px){
     nav{
@@ -858,12 +861,24 @@ img:hover:not(.etudeGauche, .etudeDroite){
         margin-top: -10% !important;
         left: 63% !important;
     }
+    #showAll{
+        width: 30% !important;
+    }
+    #showAllDiv h1{
+        font-size: 28px !important;
+    }
 }
 
 @media screen and (max-width: 400px){
     .etudeDroite, .etudeGauche{
         width: 30% !important;
         left: 69% !important;
+    }
+    #showAll{
+        width: 35% !important;
+    }
+    #showAllDiv h1{
+        font-size: 25px !important;
     }
 }
 
