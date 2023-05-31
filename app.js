@@ -75,6 +75,12 @@ function WorkOfTypeWorks(e){
                 if (e.children[0].innerHTML == "All"){
                     if (j==0 ){
                         listWork.children[i].children[0].id = 'Projet'+numWorks
+                        
+                        if (numWorks%2==0){
+                            listWork.children[i].children[0].classList = 'ProjetsDroite'
+                        }else{
+                            listWork.children[i].children[0].classList = 'ProjetsGauche'
+                        }
 
                         if (listWork.children[i].children[0].children[0].children[0].alt!=undefined){
                             if (numWorks%2!=0){
@@ -86,10 +92,17 @@ function WorkOfTypeWorks(e){
 
                         numWorks++
                         showAll.innerHTML = 'Cacher'
+                        //Quand clique sur all, voir tout --> cacher
                         //affiche tout (meme voir tout)
                     }
                 }else{
                     listWork.children[i].children[0].id = 'Projet'+numWorks
+
+                    if (numWorks%2==0){
+                        listWork.children[i].children[0].classList = 'ProjetsDroite'
+                    }else{
+                        listWork.children[i].children[0].classList = 'ProjetsGauche'
+                    }
 
                     if (listWork.children[i].children[0].children[0].children[0].alt!=undefined){
                         if (numWorks%2!=0){

@@ -441,12 +441,12 @@ h1{
     
 }
 
-#Projet3,#Projet5,#Projet7{/*en js si pair ajouter class*/
+.ProjetsGauche{
     margin-top: -8%;
 }
 
 
-#Projet2,#Projet4,#Projet6,#Projet8{/*en js si pair ajouter class*/
+.ProjetsDroite{
     margin-top: 18%;
 }
 #listWork .texte{
