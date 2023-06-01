@@ -62,8 +62,9 @@ function typeWorkClick(){
     this.style.marginRight = '-35%'//
     WorkOfTypeWorks(this)
 }
-
+var langChoice
 function WorkOfTypeWorks(e){
+    langChoice = e.children[0].innerHTML
     var numWorks = 1;
     for (var i = 0; i < listWork.children.length; i++){
         listWork.children[i].style.display = 'none'
@@ -91,9 +92,8 @@ function WorkOfTypeWorks(e){
                         }
 
                         numWorks++
+                        //Affiche tout, voir si juste afficher les n premiers
                         showAll.innerHTML = 'Cacher'
-                        //Quand clique sur all, voir tout --> cacher
-                        //affiche tout (meme voir tout)
                     }
                 }else{
                     listWork.children[i].children[0].id = 'Projet'+numWorks
@@ -171,7 +171,46 @@ github.addEventListener('click', git)
 function git(){
     window.open("https://github.com/SasuLG", "popup");
 }
-//quand hover recuperer le parent et ajouter .etudeHover
-//quand choisLang, modifier en conséquence par rapport au num projet donnée
-
-//erreur quand hover un non etude
+if (NbProjects>7){
+    var showAllDiv = document.createElement('div')
+    showAllDiv.id = 'showAllDiv'
+    var showAll = document.createElement('h1')
+    showAllDiv.appendChild(showAll)
+    showAll.addEventListener('click', voirTout)
+    showAll.innerHTML = "Voir tout"
+    showAll.id = 'showAll'
+    showAll.classList.add('border')
+    var work = document.querySelector('#work')
+    work.appendChild(showAllDiv)
+}
+function voirTout(){
+    var numProjetsLang = 0
+    for (var i  = 0; i < listWork.childElementCount; i++){
+        var langs = listWork.children[i].className.split(' ')
+        var isadd = false
+        for (var j = 0; j < langs.length; j++){
+            if (showAll.innerHTML == 'Voir tout' && ((langs[j] == langChoice || langChoice == "All" ) ||(langs[j] == 'CSharp' && langChoice == 'C#' || langChoice == undefined)) ){//&& i>7
+                if (!isadd){
+                    numProjetsLang++
+                    isadd = true
+                }
+                listWork.children[i].children[0].id = 'Projet'+(numProjetsLang)
+                if (numProjetsLang%2==0){
+                    listWork.children[i].children[0].classList = 'ProjetsDroite'
+                }else{
+                    listWork.children[i].children[0].classList = 'ProjetsGauche'
+                }
+                listWork.children[i].style.display = 'block'
+            }else{
+                if (listWork.children[i].children[0].id.split('t')[1]>8 && i < listWork.childElementCount && !isadd){
+                    listWork.children[i].style.display = 'none' 
+                }
+            }
+        }
+    }
+    if (showAll.innerHTML == 'Voir tout'){
+        showAll.innerHTML = 'Cacher'
+    }else{
+        showAll.innerHTML = 'Voir tout'
+    }
+}

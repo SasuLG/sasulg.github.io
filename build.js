@@ -5,7 +5,7 @@ var NbProjects = 13//Faire avec tabTitre.length
 
 infoNbProjects.children[1].innerHTML = NbProjects//déplacer après
 
-var images = ['odomo.png', 'biosphère.png', 'Installation de Poste.PNG', 'BD.PNG', 'site.png', 'PESTEL.png', 'GenMdp.PNG', 'Quizz.png', 'Memories.png', 'enConstru.PNG', 'enConstru.PNG', 'enConstru.PNG', 'enConstru.PNG']
+var images = ['odomo.png', 'biosphère.png', 'Installation de Poste.PNG', 'BD.PNG', 'site.png', 'PESTEL.png', 'GenMdp.PNG', 'Quizz.png', 'Memories.png', 'enConstru.png', 'enConstru.png', 'enConstru.png', 'enConstru.png']
 
 var tabTitre =  ['Odomo', 'Biosphère', 'Installation de poste', 'Création de base de données', "Conception d'un site web", 'Analyse PESTEL', 'Générateur de mot de passe', 'Quizz', 'Memories', 'Jeu Java', 'Jeu IHM', 'Creation Réseau', 'Exploraiton algo']
 
@@ -106,6 +106,8 @@ function build(){
                                 var p2 = document.createElement('p')
                                 if(Language[nbLanguageTotal] == 'Html-Css'){
                                     p2.innerHTML = 'Html/Css'
+                                }else if (Language[nbLanguageTotal] == 'CSharp'){
+                                    p2.innerHTML = 'C#'
                                 }else{
                                     p2.innerHTML = Language[nbLanguageTotal]
                                 }
@@ -131,6 +133,7 @@ function build(){
 build()
 
 //DEPLACER DANS APP
+/*
 if (NbProjects>7){
     var showAllDiv = document.createElement('div')
     showAllDiv.id = 'showAllDiv'
@@ -168,3 +171,4 @@ function voirTout(){
         showAll.innerHTML = 'Voir tout'
     }
 }
+*/

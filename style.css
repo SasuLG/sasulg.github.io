@@ -115,6 +115,9 @@ p, h2, h3, h5, button{
     opacity: 0.7;
     */
 }
+#aPropos p{
+    font-size: 20px;
+}
 a{
     text-decoration: none;
     display: flex;
@@ -811,6 +814,9 @@ img:hover:not(.etudeGauche, .etudeDroite){
     #showAll{
         width: 20% !important;
     }
+    #aPropos p{
+        font-size: 16px;
+    }
 }
 @media screen and (max-width: 550px){
     nav{
@@ -866,6 +872,9 @@ img:hover:not(.etudeGauche, .etudeDroite){
     }
     #showAllDiv h1{
         font-size: 28px !important;
+    }
+    #aPropos p{
+        font-size: 14px;
     }
 }
 
