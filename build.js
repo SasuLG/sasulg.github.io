@@ -12,7 +12,12 @@ var tabTitre =  ['Odomo', 'Biosphère', 'Installation de poste', 'Création de b
 var tabPres = ['Programmation d’une petite station météorologique, avec interface', 'Jeu de plateau avec un ajout des règles succéssives', "Installation d'un poste de travail sous une marchine virtuelle pour un programmeur GO"
 ,"Création d'une base de données ansi que le remplissage", "Conception d'un site web (d'une analyse Pestel d'un entreprise) comportant 3 pages", "Analyse PESTEL d'un entreprise (Delpeyrat)"
 ,"Générateur de mot de passe, avec plusieurs options(nb mdp, nb caractères, type caractères)", "Un quizz avec plusieurs niveau de difficulté ansi qu'un niveau bonus (avec quelques petits secrets)", "Un jeu de Memories en local (à 1 ou deux joueurs) avec plusieurs niveau de difficulté", 
-"En constru", "En constru", "En contru", "En contru"]
+"En constru", "En constru", "En constru", "En constru"]
+
+var tabPresAnglais = ['Programming a small weather station, with interface', 'Board game with an addition of the rules', "Installation of a workstation under a virtual marchine for a GO programmer"
+,"Creation of a database as well as the filling", "Design of a website (a Pestel analysis of a company) with 3 pages", "Pestel analysis of a company (Delpeyrat)"
+,"Password generator, with several options (nb mdp, nb characters, type characters)", "A quiz with several difficulty levels as well as a bonus level (with some small secrets)", "A local Memories game (1 or two players) with several difficulty levels", 
+"In construction", "In construction", "In construction", "In construction"]
 
 var date = ['2022', '2022', '2022', '2022', '2022', '2022', '2023', '2023', '2023', '2023', '2023', '2023', '2023']
 var nbLanguage = [1, 1, 1, 1, 1, 1, 2, 2, 2,1,1, 1, 1]
