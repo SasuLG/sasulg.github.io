@@ -17,6 +17,9 @@ document.addEventListener('scroll', e=>{
 var typeWorks = document.querySelector('#TypeWork')
 var listWork = document.querySelector('#listWork')
 
+var divNbProjets = document.querySelector('#NbLanguage')
+divNbProjets.children[2].innerHTML = typeWorks.childElementCount-1
+
 for (var i = 0; i < typeWorks.childElementCount; i++){
     typeWorks.children[i].addEventListener('click', typeWorkClick)
 }
@@ -38,7 +41,7 @@ function typeWorkClick(){
             this.classList.add('red')
             break;
         case 'javascript':
-            this.classList.add('yellow')
+            this.classList.add('yellowgreen')
             break;
         case 'html-css':
             this.classList.add('blue')
@@ -54,6 +57,12 @@ function typeWorkClick(){
             break;
         case 'c#':
             this.classList.add('purple')
+            break;
+        case 'python':
+            this.classList.add('yellow')
+            break;
+        case 'php':
+            this.classList.add('purpleBlue')
             break;
         default:
             console.log('erreur')
