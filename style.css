@@ -226,7 +226,15 @@ h1{
     line-height: 24px;
 }
 
-#logo2 a, #logo4 a, #logo1 a{
+/*
+#logo5{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+*/
+
+#logos a{
     width: 100%;
     height: 100%;
 }
@@ -570,7 +578,7 @@ button{
     margin: 5%;
 }
 
-#logo3:hover, #logo1:hover, #logo2:hover, #logo4:hover{
+#logos div{
     cursor: pointer !important;
 }
 
@@ -671,6 +679,12 @@ nav a:hover{
 }
 #CSharp:hover{
     background-color: purple;
+}
+#Python:hover{
+    background-color: #FFDF00;
+}
+#PHP:hover{
+    background-color: #474A8A;
 }
 
 .oui{
@@ -960,4 +974,17 @@ img:hover:not(.etudeGauche, .etudeDroite){
 
 #showAll:hover{
     cursor: pointer;
+}
+
+
+.particules{
+    width: 15px;
+    height: 15px;
+    mix-blend-mode: screen;
+    background-image: radial-gradient(#99ffff,#99ffff 10%, rgba(153,255,255,0)56%);
+    position: absolute;
+    top : 0px;
+    left: 0px;
+    opacity: 1;
+    filter: brightness(100%);
 }

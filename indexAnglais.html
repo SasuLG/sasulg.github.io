@@ -24,6 +24,9 @@
                 <h3 >github</h3>
             </div>
             <div id="logo4">
+                <h3><a href="https://www.linkedin.com/in/l%C3%A9o-graziani-ba64b5296/">LinkedIn</a></h3>
+            </div>
+            <div id="logo5">
                 <h3><a href="index.html">French version</a></h3>
                 <!--<h3><a href="index.html"><img src="image/fr.png" alt="" >French version</a></h3>-->
             </div>
@@ -188,29 +191,29 @@
                 <div id="contact">
                     <p>A question? a tip?<p>
                     <h3>Contact me</h3>
-                    <form method="get" class="formulaire">
+                    <form   action="https://formspree.io/f/myyrggzg" method="POST" class="formulaire">
                         <div id="gridForm">
                             <div id="Name">
-                                <p><label for="name">Nom (mandatory)</label></p>
+                                <p><label for="name">Nom (obligatoire)</label></p>
                                 <p><input type="text" id="name" required></p>
                             </div>
                             <div id="Mail">
-                                <p><label for="email">email address(mandatory)</label></p>
-                                <p><input type="email" id="email" required></p>
-                            </div>
+                                <p><label for="email">Adresse e-mail(obligatoire)</label></p>
+                                <p><input type="email" name="email" id="email" required></p>
+                            </div>                    
                             <div id="Object">
-                                <p><label for="Objet">Object</label></p>
+                                <p><label for="Objet">Objet</label></p>
                                 <p><input type="text" id="Objet" required></p>
                             </div>
                             <div id="Text">
-                                <p><label for="Message">Message (mandatory)</label></p>
-                                <p><textarea id="Message" rows="10" cols="42" required placeholder="Saisissez ici..."></textarea></p>
+                                <p><label for="Message">Message (obligatoire)</label></p>
+                                <p><textarea id="Message" name="message" rows="10" cols="42" required placeholder="Saisissez ici..."></textarea></p>
                             </div>
                         </div>
 
                         <div id="Sumbit">
                             <div class="border">
-                                <button id="sumbit">Send</button>
+                                <button id="sumbit" type="submit">Envoyer</button>
                             </div>
                         </div>
 
@@ -222,5 +225,6 @@
     </section>
     <script src="build.js"></script>
     <script src="app.js"></script>
+    <script src="particules.js"></script>
 </body>
 </html>
