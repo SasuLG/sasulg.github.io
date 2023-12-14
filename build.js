@@ -3,27 +3,27 @@ var infoNbProjects = document.querySelector('#NbProjets')
 var listWork = document.querySelector('#listWork')
 
 
-var images = ['odomo.png', 'biosphère.png', 'Installation de Poste.PNG', 'BD.PNG', 'site.png', 'PESTEL.png', 'GenMdp.PNG', 'Quizz.png', 'Memories.png', 'jpo.png', 'enConstru.png', 'graphe4.png', 'enConstru.png']
+var images = ['odomo.png', 'biosphère.png', 'Installation de Poste.PNG', 'BD.PNG', 'site.png', 'PESTEL.png', 'GenMdp.PNG', 'Quizz.png', 'Memories.png', 'jpo.png', 'enConstru.png', 'graphe4.png', 'enConstru.png', "game.png"]
 
-var tabTitre =  ['Odomo', 'Biosphère', 'Installation de poste', 'Création de base de données', "Conception d'un site web", 'Analyse PESTEL', 'Générateur de mot de passe', 'Quizz', 'Memories', 'Jeu Java', 'Jeu IHM', 'Exploraiton algo', 'Analyse de données']
+var tabTitre =  ['Odomo', 'Biosphère', 'Installation de poste', 'Création de base de données', "Conception d'un site web", 'Analyse PESTEL', 'Générateur de mot de passe', 'Quizz', 'Memories', 'Jeu Java', 'Jeu IHM', 'Exploraiton algo', 'Analyse de données', "Game"]
 
 var tabPres = ['Programmation d’une petite station météorologique, avec interface', 'Jeu de plateau avec un ajout des règles succéssives', "Installation d'un poste de travail sous une marchine virtuelle pour un programmeur GO"
 ,"Création d'une base de données ansi que le remplissage", "Conception d'un site web (d'une analyse Pestel d'un entreprise) comportant 3 pages", "Analyse PESTEL d'un entreprise (Delpeyrat)"
 ,"Générateur de mot de passe, avec plusieurs options(nb mdp, nb caractères, type caractères)", "Un quizz avec plusieurs niveau de difficulté ansi qu'un niveau bonus (avec quelques petits secrets)", "Un jeu de Memories en local (à 1 ou deux joueurs) avec plusieurs niveau de difficulté", 
-"Jeu pour appprendre les bases de java qui consiste à déplacer une grenouille jusqu'au nénuphar", "En constru", "En constru", "En constru"]
+"Jeu pour appprendre les bases de java qui consiste à déplacer une grenouille jusqu'au nénuphar", "En constru", "En constru", "En constru", "En constru"]
 
 var tabPresAnglais = ['Programming a small weather station, with interface', 'Board game with an addition of the rules', "Installation of a workstation under a virtual marchine for a GO programmer"
 ,"Creation of a database as well as the filling", "Design of a website (a Pestel analysis of a company) with 3 pages", "Pestel analysis of a company (Delpeyrat)"
 ,"Password generator, with several options (nb mdp, nb characters, type characters)", "A quiz with several difficulty levels as well as a bonus level (with some small secrets)", "A local Memories game (1 or two players) with several difficulty levels", 
-"In construction", "In construction", "In construction", "In construction"]
+"In construction", "In construction", "In construction", "In construction", "In construction"]
 
-var date = ['2022', '2022', '2022', '2022', '2022', '2022', '2023', '2023', '2023', '2023', '2023', '2023', '2023']
-var nbLanguage = [1, 1, 1, 1, 1, 1, 2, 2, 2,1,1, 1, 4]
+var date = ['2022', '2022', '2022', '2022', '2022', '2022', '2023', '2023', '2023', '2023', '2023', '2023', '2023', "2023"]
+var nbLanguage = [1, 1, 1, 1, 1, 1, 2, 2, 2,1,1, 1, 4, 2]
 var nbLanguageTotal = 0
-var Language = ['Java', 'Java', 'Shell', 'SQL', 'Html-Css', 'Managment', 'javascript', 'Html-Css', 'javascript', 'Html-Css', 'javascript', 'Html-Css', 'Java', 'CSharp', 'Shell', 'C#', "Python", "SQL", "Managment"]
+var Language = ['Java', 'Java', 'Shell', 'SQL', 'Html-Css', 'Managment', 'javascript', 'Html-Css', 'javascript', 'Html-Css', 'javascript', 'Html-Css', 'Java', 'CSharp', 'Shell', 'C#', "Python", "SQL", "Managment", "Html-Css", "javascript"]
 
-var etude = [true, true, true, true, true, true, false, false, false, true, true, true, true]
-var retExHtml = ["Odomo", "Biosphere", "InstallationPoste", "CreationBD", "SiteWebPeste", "PESTEL", "", "", "", ""]
+var etude = [true, true, true, true, true, true, false, false, false, true, true, true, true, false]
+var retExHtml = ["Odomo", "Biosphere", "InstallationPoste", "CreationBD", "SiteWebPeste", "PESTEL", "", "", "",]
 
 var NbProjects = tabTitre.length
 
@@ -138,44 +138,3 @@ function build(){
     }
 }
 build()
-
-//DEPLACER DANS APP
-/*
-if (NbProjects>7){
-    var showAllDiv = document.createElement('div')
-    showAllDiv.id = 'showAllDiv'
-    var showAll = document.createElement('h1')
-    showAllDiv.appendChild(showAll)
-    showAll.addEventListener('click', voirTout)
-    showAll.innerHTML = "Voir tout"
-    showAll.id = 'showAll'
-    showAll.classList.add('border')
-    var work = document.querySelector('#work')
-    work.appendChild(showAllDiv)
-}
-
-function voirTout(){
-    for (var i  = 0; i < listWork.childElementCount; i++){
-        if (showAll.innerHTML == 'Voir tout'){
-            listWork.children[i].children[0].id = 'Projet'+(i+1)
-                        
-            if ((i+1)%2==0){
-                listWork.children[i].children[0].classList = 'ProjetsDroite'
-            }else{
-                listWork.children[i].children[0].classList = 'ProjetsGauche'
-            }
-            listWork.children[i].style.display = 'block'
-        }else{
-            if (i>7 && i < listWork.childElementCount){
-                listWork.children[i].style.display = 'none' 
-
-            }
-        }
-    }
-    if (showAll.innerHTML == 'Voir tout'){
-        showAll.innerHTML = 'Cacher'
-    }else{
-        showAll.innerHTML = 'Voir tout'
-    }
-}
-*/

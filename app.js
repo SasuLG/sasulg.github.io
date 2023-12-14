@@ -154,10 +154,13 @@ listWork.style.gridTemplateRows+='1fr'
 var images = document.querySelectorAll('#listWork img')
 images.forEach(e=>{
     if (e.alt == 'Générateur de mot de passe'){
+        e.style.cursor = 'pointer' 
         e.addEventListener('click', mdp)
     }else if (e.alt == 'Quizz'){
         e.addEventListener('click', quizz)
+        e.style.cursor = 'pointer' 
     }else if(e.alt == 'Memories'){
+        e.style.cursor = 'pointer' 
         e.addEventListener('click', memories)
     }else{
         
@@ -222,4 +225,9 @@ function voirTout(){
     }else{
         showAll.innerHTML = 'Voir tout'
     }
+}
+
+
+document.onmousemove = function(e){
+    listParticules.push(new Particules(e.x, e.y));
 }

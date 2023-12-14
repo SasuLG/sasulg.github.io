@@ -1,7 +1,7 @@
 var listParticules = [];
 
 class Particules{
-    constructor(){
+    constructor(x, y){
         this.particules = document.createElement('div');
         this.particules.classList.add('particules');
 
@@ -41,6 +41,11 @@ class Particules{
         this.particules.style.backgroundImage = `radial-gradient(#${color1}, #${color2} 10%, #${color3} 56%)`;
         this.particules.style.borderRadius = '50%';
         
+        if (x != null && y!= null){
+            this.particules.style.top = y + 'px';
+            this.particules.style.left = x + 'px';
+            //this.direcitonTop = 10
+        }
     }
     animate() {
         var computedStyle = getComputedStyle(this.particules);
