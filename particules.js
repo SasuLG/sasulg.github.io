@@ -45,6 +45,7 @@ class Particules{
             this.particules.style.top = y + 'px';
             this.particules.style.left = x + 'px';
             //this.direcitonTop = 10
+            //les faires descendre doucement
         }
     }
     animate() {
