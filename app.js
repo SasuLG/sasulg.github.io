@@ -228,6 +228,40 @@ function voirTout(){
 }
 
 
+
+var pixelsParcourus = 0;
 document.onmousemove = function(e){
-    listParticules.push(new Particules(e.x, e.y));
+    pixelsParcourus++;
+    if (pixelsParcourus >= 2){
+        var index = listParticules2.length
+        particule = new Particules(e.x, e.y+scrolled, true)
+        //particule.particules.style.backgroundColor = "red"
+        setTimeout(()=> deleteParticule(index),1500)
+        pixelsParcourus = 0
+    }
 }
+
+
+document.onmousedown = function(e){
+    for (var i = 0; i < 8; i++){
+        setTimeout(()=>{
+            var index = listParticules2.length
+            particule = new Particules(e.x, e.y+scrolled, true)
+            particule.particules.style.backgroundColor = "red"
+            setTimeout(()=> deleteParticule(index),1500)
+        },100)
+    }
+}
+function deleteParticule(index){
+    var test = document.querySelectorAll(".particules")
+    test.forEach(e=>{
+        if (e.id == "particule"+(index+1)){
+            e.style.opacity = 0
+            document.body.removeChild(e)
+            listParticules2.splice(index%listParticules2.length, 1)
+        }
+    })
+}
+//possibilite de ne pas les anime
+//possibilite de ne pas les activer
+//faire gaffe avec les images

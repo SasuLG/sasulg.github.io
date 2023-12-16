@@ -1,11 +1,16 @@
-var listParticules = [];
+var scrolled = 0
+document.addEventListener('scroll', e=>{
+    scrolled = window.scrollY
+})
 
+var listParticules = [];
+var listParticules2 = [];
 class Particules{
-    constructor(x, y){
+    constructor(x, y, mooved){
         this.particules = document.createElement('div');
         this.particules.classList.add('particules');
+        this.mooved = mooved
 
-        //this.particules.style.top = Math.random() * window.innerHeight-100 + 'px';
         this.particules.style.top = window.innerHeight-100 + 'px';//
         this.particules.style.left = Math.random() * window.innerWidth -100 + 'px';
 
@@ -31,28 +36,35 @@ class Particules{
             this.direcitonLeft = Math.floor(Math.random() * (3-(-3))-3);
         }
 
-        document.body.appendChild(this.particules);
-        listParticules.push(this);
-
         //
-        var color1 = Math.floor(Math.random()*16777215).toString(16);
-        var color2 = Math.floor(Math.random()*16777215).toString(16);
-        var color3 = Math.floor(Math.random()*16777215).toString(16);
-        this.particules.style.backgroundImage = `radial-gradient(#${color1}, #${color2} 10%, #${color3} 56%)`;
+        if (!mooved){
+            var color1 = Math.floor(Math.random()*16777215).toString(16);
+            var color2 = Math.floor(Math.random()*16777215).toString(16);
+            var color3 = Math.floor(Math.random()*16777215).toString(16);
+            this.particules.style.backgroundImage = `radial-gradient(#${color1}, #${color2} 10%, #${color3} 56%)`;
+        }
+
         this.particules.style.borderRadius = '50%';
         
         if (x != null && y!= null){
             this.particules.style.top = y + 'px';
             this.particules.style.left = x + 'px';
             //this.direcitonTop = 10
-            //les faires descendre doucement
         }
+        document.body.appendChild(this.particules);
+        if (mooved){
+            listParticules2.push(this);
+            this.particules.id = 'particule'+listParticules2.length;
+        }else{
+            listParticules.push(this);
+            this.particules.id = 'particule'+listParticules.length;
+        }
+        this.computedStyle = getComputedStyle(this.particules);
+
     }
     animate() {
-        var computedStyle = getComputedStyle(this.particules);
-        var theTop = parseInt(computedStyle.top);
-        var theLeft = parseInt(computedStyle.left);
-
+        var theTop = parseInt(this.computedStyle.top);
+        var theLeft = parseInt(this.computedStyle.left);
 
         this.particules.style.top = (theTop + this.direcitonTop) + 'px';
         this.particules.style.left = (theLeft + this.direcitonLeft) + 'px';
@@ -75,19 +87,23 @@ class Particules{
         this.brigthness += 0.1 * this.Changeopacity;
         this.particules.style.filter = 'brightness(' + this.brigthness + '%)';
 
-        if (theTop > window.innerHeight - 30 || theLeft > window.innerWidth - 30 || theTop < 0 || theLeft < 0) {
+        if ((theLeft > window.innerWidth - 30 || theTop < 0 || theLeft < 0) && !this.mooved) {
             listParticules.splice(listParticules.indexOf(this), 1);
             this.particules.remove();
         }
     }
+
 }
 var i = 0
 function animate() {
     listParticules.forEach(particules => {
         particules.animate();
     });
-    if (i %4 == 0){
-        new Particules();
+    listParticules2.forEach(particules => {
+        particules.animate();
+    });
+    if (i %4 == 0 && scrolled < 1000){
+        new Particules(null, null, false);
     }
     i++;
     requestAnimationFrame(animate);
