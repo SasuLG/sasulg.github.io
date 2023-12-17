@@ -228,7 +228,7 @@ function voirTout(){
 }
 
 
-
+/*
 var pixelsParcourus = 0;
 document.onmousemove = function(e){
     pixelsParcourus++;
@@ -262,6 +262,7 @@ function deleteParticule(index){
         }
     })
 }
+*/
 //possibilite de ne pas les anime
 //possibilite de ne pas les activer
 //faire gaffe avec les images
