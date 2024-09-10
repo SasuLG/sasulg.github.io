@@ -162,6 +162,9 @@ images.forEach(e=>{
     }else if(e.alt == 'Memories'){
         e.style.cursor = 'pointer' 
         e.addEventListener('click', memories)
+    }else if (e.alt == 'MyAnyList'){
+        e.style.cursor = 'pointer' 
+        e.addEventListener('click', myAnyList)
     }else{
         
     }
@@ -175,6 +178,9 @@ function quizz(){
 }
 function memories(){
     window.open("https://sasulg.github.io/Memories", "popup");
+}
+function myAnyList(){
+    window.open("https://myanylist.vercel.app", "popup");
 }
 
 
