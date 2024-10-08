@@ -19,7 +19,7 @@ var tabPresAnglais = ['Programming a small weather station, with interface', 'Bo
 
 var date = ['2022', '2022', '2022', '2022', '2022', '2022', '2023', '2023', '2023', '2023', '2023', "2023", "2024", "2024"]
 var nbLanguage = [1, 1, 1, 1, 1, 1, 2, 2, 2,1,1, 2, 4, 3]
-var nbLanguageTotal = 0
+var nbLanguageTotal = nbLanguage.map(x => x).reduce((a, b) => a + b, 0) - 1
 var Language = ['Java', 'Java', 'Shell', 'SQL', 'Html-Css', 'Managment', 'javascript', 'Html-Css', 'javascript', 'Html-Css', 'javascript', 'Html-Css', 'Java', "Java", "Html-Css", "javascript", "PHP", "Html-Css","javascript", "Managment", "javascript", "Html-Css", "SQL"]
 
 var etude = [true, true, true, true, true, true, false, false, false, true, true, false, true, false]
@@ -30,9 +30,9 @@ var NbProjects = tabTitre.length
 infoNbProjects.children[1].innerHTML = NbProjects +2
 
 function build(){
-    for (var i = 0; i < NbProjects; i++){
+    for (var i = NbProjects-1; i >=0 ; i--){
         var divLanguage =document.createElement('div')
-        if (i>7){
+        if (i<NbProjects - 8){
             divLanguage.style.display = 'none'
         }
         listWork.appendChild(divLanguage)
@@ -41,9 +41,9 @@ function build(){
             var numProject = i+1
             divProject.id = ('Projet'+ numProject)
             if (numProject%2==0){
-                divProject.classList.add('ProjetsDroite')
-            }else{
                 divProject.classList.add('ProjetsGauche')
+            }else{
+                divProject.classList.add('ProjetsDroite')
             }
             divLanguage.appendChild(divProject)
     
@@ -56,9 +56,9 @@ function build(){
                         imgEtude.src = "image/etude.png"
                         imgEtude.alt = "etude"
                         if (i%2==0){
-                            imgEtude.classList.add('etudeGauche')
-                        }else{
                             imgEtude.classList.add('etudeDroite')
+                        }else{
+                            imgEtude.classList.add('etudeGauche')
                         }
                         imgEtude.id  = tabTitre[i]
                         divImages.appendChild(imgEtude)
@@ -103,7 +103,7 @@ function build(){
                     var infosLang = document.createElement('div')
                     infosLang.classList.add('infosLang')
                     texte.appendChild(infosLang)
-                    for (var k = 0; k < nbLanguage[i]; k++){
+                    for (var k = nbLanguage[i] - 1; k >= 0; k--){
     
     
                             var border = document.createElement('div')
@@ -121,7 +121,7 @@ function build(){
                                 border.appendChild(p2)
     
                         divLanguage.classList.add(Language[nbLanguageTotal])
-                        nbLanguageTotal++
+                        nbLanguageTotal--
                     }
     
                     var infosDate = document.createElement('div')
