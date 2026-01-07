@@ -1,0 +1,129 @@
+svg path{
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 1;
+    stroke-dasharray: 670;
+    stroke-dashoffset: 670;
+    animation: textAnimation 4s ease-in-out 1 forwards;
+}
+
+@keyframes  textAnimation{
+    0%{
+        stroke-dashoffset: 670;
+    }
+    80%{
+        fill: transparent;
+    }
+    100%{
+        fill: #fff;
+        stroke-dashoffset: 0;
+    }
+}
+
+
+/*OPTION*/
+
+svg {
+    animation: test 4s ease-in 1 forwards;
+    /* filter: drop-shadow(0 0 10px rgba(226, 96, 16, 0.7)); */
+}
+
+@keyframes test {
+    0%{
+        filter: none;
+    }
+    80%{
+        filter: none;
+    }   
+    100%{
+        filter: drop-shadow(0 0 10px rgba(226, 96, 16, 0.7));
+    }
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+.banner .content .title {
+    font-family: 'Hallowed Grounds';
+    font-size: 9em;
+}
+.banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("https://uploads-ssl.webflow.com/63c6b6a8e34f347803dc4c5a/63d279fb46be2a0d42ddba36_Lights%20(7)%20(1).png");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+
+    mask-image: url(image/test/2.gif);
+    mask-size: cover;
+    mask-position: center;
+}
+
+
+
+.skill {
+    position: relative;
+}
+
+.skill-tooltip {
+    position: absolute;
+    bottom: calc(50% + 10px);
+    left: 50%;
+
+    gap: 12px;
+    padding: 2rem 3rem !important;
+    border-radius: 14px !important;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+
+    /* backdrop-filter: blur(7px); */
+    z-index: 1;
+
+    background: radial-gradient(
+        60% 60% at 50% 0%,
+        rgba(126, 61, 255, 0.25),
+        rgba(11, 1, 29, 0.95)
+    ) !important;
+    
+    backdrop-filter: blur(1.5px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.6),
+        inset 0 0 20px rgba(168, 128, 255, 0.15) !important;
+
+    flex-wrap: wrap;
+    max-width: 260px;
+}
+
+.skill:hover .skill-tooltip {
+    opacity: 0.99;
+    transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.skill-tooltip img {
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    min-height: 50px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+/* éléments à droite */
+#language .skill:nth-child(3) .skill-tooltip{
+    right: -50%;
+}
+#language .skill:nth-child(5) .skill-tooltip {
+    left: auto;
+}
+
+.image_noire{
+    filter: brightness(200);
+}

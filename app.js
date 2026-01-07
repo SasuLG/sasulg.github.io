@@ -14,6 +14,42 @@ document.addEventListener('scroll', e=>{
 
 })
 */
+
+document.querySelectorAll('.skill-tooltip').forEach((tooltip) => {
+    const isRight = Math.random() > 0.5;
+    const tooltipRect = tooltip.getBoundingClientRect();
+    // if (tooltipRect.left > window.innerWidth * 0.6) {
+    //     isRight = true;
+    // }
+    if (isRight) tooltip.style.transform = 'translateX(25%) translateY(10px)';
+    else tooltip.style.transform = 'translateX(-50%) translateY(10px)';
+
+    let t = 0;
+
+    function float() {
+        
+        t += 0.025;
+        let y = Math.sin(t) * 5;
+        
+        tooltip.style.transform = `translateX(-20%) translateY(${y}px)`;
+
+        tooltip._raf = requestAnimationFrame(float);
+    }
+
+    tooltip.parentElement.addEventListener('mouseenter', () => {
+        t = 0;
+        float();
+    });
+
+    tooltip.parentElement.addEventListener('mouseleave', () => {
+        cancelAnimationFrame(tooltip._raf);
+        // if (tooltipRect.left > window.innerWidth * 0.6) isRight = true;
+        const isRight = Math.random() > 0.5;
+        if (isRight) tooltip.style.transform = 'translateX(25%) translateY(10px)';
+        else tooltip.style.transform = 'translateX(-50%) translateY(10px)';
+    });
+});
+
 var typeWorks = document.querySelector('#TypeWork')
 var listWork = document.querySelector('#listWork')
 
@@ -165,6 +201,9 @@ images.forEach(e=>{
     }else if (e.alt == 'MyAnyList'){
         e.style.cursor = 'pointer' 
         e.addEventListener('click', myAnyList)
+    }else if (e.alt == 'Anges MDM'){
+        e.style.cursor = 'pointer' 
+        e.addEventListener('click', anges)
     }else{
         
     }
@@ -181,6 +220,9 @@ function memories(){
 }
 function myAnyList(){
     window.open("https://myanylist.vercel.app", "popup");
+}
+function anges(){
+    window.open("https://anges-mdm.vercel.app", "popup");
 }
 
 
