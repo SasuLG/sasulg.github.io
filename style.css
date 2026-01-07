@@ -46,7 +46,7 @@ header{
     display: flex;
     justify-content: center;
     margin-bottom: 7%;
-    margin-top: 6%;
+    /* margin-top: 6%; */
 }
 #logo:hover{
     transform: rotate(360deg);

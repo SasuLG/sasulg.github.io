@@ -26,6 +26,7 @@ svg path{
 svg {
     animation: test 4s ease-in 1 forwards;
     /* filter: drop-shadow(0 0 10px rgba(226, 96, 16, 0.7)); */
+    padding: 10rem 0 0 0 ;
 }
 
 @keyframes test {
@@ -36,7 +37,7 @@ svg {
         filter: none;
     }   
     100%{
-        filter: drop-shadow(0 0 10px rgba(226, 96, 16, 0.7));
+        filter: drop-shadow(0 0 10px rgba(62, 21, 226, 0.7));
     }
 }
 
@@ -44,8 +45,9 @@ svg {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 60vh;
     position: relative;
+    padding: 0 0 0 1rem;
 }
 .banner .content .title {
     font-family: 'Hallowed Grounds';
