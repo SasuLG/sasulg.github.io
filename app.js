@@ -201,7 +201,7 @@ images.forEach(e=>{
     }else if (e.alt == 'MyAnyList'){
         e.style.cursor = 'pointer' 
         e.addEventListener('click', myAnyList)
-    }else if (e.alt == 'Anges MDM'){
+    }else if (e.alt == 'Anges Mdm'){
         e.style.cursor = 'pointer' 
         e.addEventListener('click', anges)
     }else if (e.alt == 'Skeletum'){
@@ -228,7 +228,7 @@ function anges(){
     window.open("https://anges-mdm.vercel.app", "popup");
 }
 function skeletum(){
-    window.open("https://sasulg.github.io/Skeletum", "popup");
+    window.open("https://sasulg.github.io/skeletum", "popup");
 }
 
 
