@@ -198,9 +198,15 @@ images.forEach(e=>{
     }else if(e.alt == 'Memories'){
         e.style.cursor = 'pointer' 
         e.addEventListener('click', memories)
+    }else if(e.alt == 'Puissance 4'){
+        e.style.cursor = 'pointer' 
+        e.addEventListener('click', puissance4)
     }else if (e.alt == 'MyAnyList'){
         e.style.cursor = 'pointer' 
         e.addEventListener('click', myAnyList)
+    }else if (e.alt == 'Revenge of Deadly Sins'){
+        e.style.cursor = 'pointer' 
+        e.addEventListener('click', rds)
     }else if (e.alt == 'Anges Mdm'){
         e.style.cursor = 'pointer' 
         e.addEventListener('click', anges)
@@ -220,6 +226,12 @@ function quizz(){
 }
 function memories(){
     window.open("https://sasulg.github.io/Memories", "popup");
+}
+function puissance4(){
+    window.open("https://sasulg.github.io/Puissance4", "popup");
+}
+function rds(){
+    window.open("https://sasulg.github.io/RDS", "popup");
 }
 function myAnyList(){
     window.open("https://myanylist.vercel.app", "popup");
