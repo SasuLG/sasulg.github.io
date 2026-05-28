@@ -213,7 +213,14 @@ images.forEach(e=>{
     }else if (e.alt == 'Skeletum'){
         e.style.cursor = 'pointer' 
         e.addEventListener('click', skeletum)
-    }else{
+    }else if(e.alt == "Rubik's"){
+        e.style.cursor = 'pointer'
+        e.addEventListener('click', rubiks)
+    }else if(e.alt == "God of Chaos"){
+        e.style.cursor = 'pointer'
+        e.addEventListener('click', godOfChaos)
+    }
+    else{
         
     }
 })
@@ -241,6 +248,12 @@ function anges(){
 }
 function skeletum(){
     window.open("https://sasulg.github.io/skeletum", "popup");
+}
+function rubiks(){
+    window.open("https://sasulg.github.io/Rubiks", "popup");
+}
+function godOfChaos(){
+    window.open("https://sasulg.github.io/god-of-chaos", "popup");
 }
 
 
