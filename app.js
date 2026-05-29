@@ -253,7 +253,7 @@ function rubiks(){
     window.open("https://sasulg.github.io/Rubiks", "popup");
 }
 function godOfChaos(){
-    window.open("https://sasulg.github.io/god-of-chaos", "popup");
+    window.open("https://sasulg.github.io/god_of_chaos", "popup");
 }
 
 
